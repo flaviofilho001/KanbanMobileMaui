@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AplicativoMaui.Paginas.MainPage">
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="FrameCardStyle" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="LightGrey"/>
+                <Setter Property="Padding" Value="10"/>
+                <Setter Property="CornerRadius" Value="10"/>
+                <Setter Property="HasShadow" Value="True"/>
+                <Setter Property="WidthRequest" Value="200"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ScrollView Orientation="Horizontal">
+        
+        <HorizontalStackLayout Spacing="10">
+            <VerticalStackLayout>
+                <Frame Style="{StaticResource FrameCardStyle}">
+                
+                </Frame>
+            </VerticalStackLayout>
+            <VerticalStackLayout>
+                <Frame Style="{StaticResource FrameCardStyle}">
+                
+                </Frame>
+            </VerticalStackLayout>
+            <VerticalStackLayout>
+                <Frame Style="{StaticResource FrameCardStyle}">
+                
+                </Frame>
+            </VerticalStackLayout>
+            
+        </HorizontalStackLayout>
+        
+        <!-- <VerticalStackLayout -->
+        <!--     Padding="30,0" -->
+        <!--     Spacing="25"> -->
+        <!--      -->
+        <!--     <Label -->
+        <!--         Text="TASK BOARD" -->
+        <!--         Style="{StaticResource Headline}" -->
+        <!--         SemanticProperties.HeadingLevel="Level1" FontAttributes="Bold"/> -->
+        <!--      -->
+        <!--      -->
+        <!--     <StackLayout> -->
+        <!--         <Grid Padding="5" BackgroundColor="LightGray" RowDefinitions="Auto" ColumnDefinitions="0.1*, 0.3*, 0.3*,0.2*, 0.1*"> -->
+        <!--             <Label Text=" " FontAttributes="Bold" Grid.Column="0"/> -->
+        <!--             <Label Text="Titulo" FontAttributes="Bold" Grid.Column="1"/> -->
+        <!--             <Label Text="Usuario" FontAttributes="Bold" Grid.Column="2"/> -->
+        <!--             <Label Text="Status" FontAttributes="Bold" Grid.Column="3"/> -->
+        <!--             <Label Text="Ações" FontAttributes="Bold" Grid.Column="4"/> -->
+        <!-- -->
+        <!--         </Grid> -->
+        <!--         <CollectionView x:Name="TarefasCollectionViewTable"> -->
+        <!--             <CollectionView.ItemTemplate> -->
+        <!--                 <DataTemplate> -->
+        <!--                     <Grid Padding="5" RowDefinitions="Auto" ColumnDefinitions="0.1*, 0.3*, 0.2*,0.2*, 0.2*"> -->
+        <!--                         <Label Text="{Binding Id}" FontAttributes="Bold" Grid.Column="0"/> -->
+        <!--                         <Label Text="{Binding Titulo}" FontAttributes="Bold" Grid.Column="1"/> -->
+        <!--                         <Label Text="{Binding NomeUsuario}" FontAttributes="Bold" Grid.Column="2"/> -->
+        <!--                         <Label Text="{Binding Status}" FontAttributes="Bold" Grid.Column="3"/> -->
+        <!--                         <Grid Grid.Column="4"> -->
+        <!--                             <Grid.RowDefinitions> -->
+        <!--                                 <RowDefinition Height="Auto"/> -->
+        <!--                                 <RowDefinition Height="Auto"/> -->
+        <!--                                 <RowDefinition Height="Auto"/> -->
+        <!--                             </Grid.RowDefinitions> -->
+        <!--                             <Button Text="Ver" BackgroundColor="Blue" TextColor="White" -->
+        <!--                                     Command="{Binding Path=BindingContext.NavigateToDetailCommand,  -->
+        <!--                         Source={x:Reference Name=TarefasCollectionViewTable}}"  -->
+        <!--                                     CommandParameter="{Binding .}" -->
+        <!--                                     Grid.Row="0"/> -->
+        <!--                             <Button Text="Editar" -->
+        <!--                                     BackgroundColor="Green" TextColor="White"  -->
+        <!--                                     Command="{Binding Path=BindingContext.NavigateToChangeCommand, -->
+        <!--                         Source={x:Reference Name=TarefasCollectionViewTable}}" -->
+        <!--                                     CommandParameter="{Binding .}" -->
+        <!--                                     Grid.Row="1"/> -->
+        <!--                             <Button Text="Excluir" -->
+        <!--                                     BackgroundColor="Red" TextColor="White"  -->
+        <!--                                     Command="{Binding Path=BindingContext.DeleteCommand, -->
+        <!--                         Source={x:Reference Name=TarefasCollectionViewTable}}" -->
+        <!--                                     CommandParameter="{Binding .}" -->
+        <!--                                     Grid.Row="2"/> -->
+        <!--                         </Grid> -->
+        <!--                          -->
+        <!--                     </Grid> -->
+        <!--                 </DataTemplate> -->
+        <!--             </CollectionView.ItemTemplate> -->
+        <!--              -->
+        <!--         </CollectionView> -->
+        <!--     </StackLayout> -->
+        <!-- </VerticalStackLayout> -->
+    </ScrollView>
+
+</ContentPage>

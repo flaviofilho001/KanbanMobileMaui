@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AplicativoMaui.Paginas.TarefasDetalhePage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            
+            <Label
+                Text="TASK BOARD - DETAILS"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+            
+            <StackLayout Padding="20">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Id:" FontAttributes="Bold"/>
+                    <Label Text="{Binding Tarefa.Id}" Margin="10,0,0,0"/>
+                </StackLayout>
+                <!-- Título -->
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Título:" FontAttributes="Bold"/>
+                    <Label Text="{Binding Tarefa.Titulo}" Margin="10,0,0,0"/>
+                </StackLayout>
+                <!-- NomeUsuario -->
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Nome:" FontAttributes="Bold"/>
+                    <Label Text="{Binding Tarefa.NomeUsuario}" Margin="10,0,0,0"/>
+                </StackLayout>
+                
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Descrição:" FontAttributes="Bold"/>
+                    <Label Text="{Binding Tarefa.Descricao}" Margin="10,0,0,0"/>
+                </StackLayout>
+                
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Data Criação:" FontAttributes="Bold"/>
+                    <Label Text="{Binding Tarefa.DataCriacao}" Margin="10,0,0,0"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Data Atualização:" FontAttributes="Bold"/>
+                    <Label Text="{Binding Tarefa.DataAtualizacao}" Margin="10,0,0,0"/>
+                </StackLayout>
+                
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Status:" FontAttributes="Bold"/>
+                    <Label Text="{Binding Tarefa.Status}" Margin="10,0,0,10"/>
+                </StackLayout>
+                
+                <Button Text="Voltar" Clicked="VoltarClicked" HorizontalOptions="Center"/>
+            </StackLayout>
+            
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
